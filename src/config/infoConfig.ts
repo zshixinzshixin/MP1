@@ -3,96 +3,70 @@ export * from './education'
 export * from './career'
 export * from './activity'
 
-
 // personal info
 export const name = 'Derek Hu'
-export const headline = 'Instructor of AI Camp'
-export const introduction = 'Hi I am Derek, teaching at SCLS. I love coding, and everything about AI.'
-export const email = 'xxx@gmail.com'
+export const headline = 'Teacher at Shanghai Soong Ching Ling School.'
+export const introduction =
+  "Coucou Les Amis! My name is Derek Hu. I'm from Hubei and an alumnus of BUPT, UChicago, and Tsinghua. I’ve been teaching Computer Science at SCLS since 2020."
+export const email = 'tong.hu@scls-sh.org'
 export const githubUsername = 'derekhut'
 
 // about page
-export const aboutMeHeadline = "I'm Corey Chiu, a software engineer based in Shenzhen, China."
+export const aboutMeHeadline = 'Who Are You and Why Should I Care?'
 export const aboutParagraphs = [
-  "I love coding. I learned programming when I in college. I wrote my first program in Java when I was 18.",
-  "I have a lot of hobbies, such as travelling, photography, watching movies, music and so on.",
-  "I'm working as a software develop engineer in Shenzhen, China now. And I'm building a lot of side projects in my spare time."
+  "Coucou Les Amis! My name is Derek Hu. I'm from Hubei and an alumnus of BUPT, UChicago, and Tsinghua. I’ve been teaching Computer Science at SCLS since 2020.",
+  'Currently I am working on a new course called AI Camp, an innovative course where high school students create real-world products and startups while exploring the frontiers of AI.',
+  "I started this blog to share the insights I learn every day. Most blogs focus on education in Artificial Intelligence and general computer science, while others share the life lessons I've learned.",
 ]
-
 
 // blog
 export const blogHeadLine = "What I've thinking about."
-export const blogIntro = "I've written something about AI, programming and life."
-
+export const blogIntro =
+  "I've written something about AI, programming and life."
 
 // social links
 export type SocialLinkType = {
-  name: string,
-  ariaLabel?: string,
-  icon: string,
+  name: string
+  ariaLabel?: string
+  icon: string
   href: string
 }
 
 export const socialLinks: Array<SocialLinkType> = [
   {
-    name: 'X',
-    icon: 'x',
-    href: 'https://x.com/realcoreychiu'
+    name: 'Tiktok',
+    icon: 'tiktok',
+    href: 'https://www.tiktok.com/@harvard?lang=en',
   },
   {
-    name: 'Bsky',
-    icon: 'bsky',
-    href: 'https://bsky.app/profile/coreychiu.com'
+    name: 'Bilibili',
+    icon: 'bilibili',
+    href: 'https://space.bilibili.com/349721082',
   },
-  {
-    name: 'Jike',
-    icon: 'pill',
-    href: 'https://okjk.co/P7c1zU'
-  },
-  {
-    name: 'Github',
-    icon: 'github',
-    href: 'https://github.com/iamcorey'
-  },
-  {
-    name: 'Wechat',
-    icon: 'wechat',
-    href: 'https://mp.weixin.qq.com/s/DxnRgqNfgzXIhqj6w_x0dQ'
-  },
-  {
-    name: 'Discord',
-    icon: 'discord',
-    href: 'https://discord.gg/xTxRg3Ej'
-  },
-  {
-    name: 'Ko-fi',
-    icon: 'coffee',
-    href: 'https://ko-fi.com/coreychiu'
-  }
 ]
 
 // https://simpleicons.org/
 export const techIcons = [
-  "typescript",
-  "javascript",
-  "supabase",
-  "cloudflare",
-  "java",
-  "oracle",
-  "mysql",
-  "react",
-  "nodedotjs",
-  "nextdotjs",
-  "prisma",
-  "postgresql",
-  "nginx",
-  "vercel",
-  "docker",
-  "git",
-  "github",
-  "visualstudiocode",
-  "androidstudio",
-  "ios",
-  "apple",
-  "wechat"
-];
+  'typescript',
+  'javascript',
+  'supabase',
+  'cloudflare',
+  'java',
+  'oracle',
+  'mysql',
+  'react',
+  'nodedotjs',
+  'nextdotjs',
+  'prisma',
+  'postgresql',
+  'nginx',
+  'vercel',
+  'docker',
+  'git',
+  'github',
+  'visualstudiocode',
+  'androidstudio',
+  'ios',
+  'apple',
+  'wechat',
+]

@@ -8,9 +8,6 @@ import { Container } from '@/components/layout/Container'
 import portraitImage from '@/images/portrait.jpg'
 import SocialLinks from '@/components/about/SocialLinks'
 
-
-
-
 export const metadata: Metadata = {
   title: 'About',
   description:
@@ -32,14 +29,12 @@ export default function About() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
             {aboutMeHeadline}
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <div className="mt-6 space-y-7 text-xl text-zinc-700 dark:text-zinc-300">
             {aboutParagraphs.map((paragraph, index) => (
-              <p key={index}>
-                {paragraph}
-              </p>
+              <p key={index}>{paragraph}</p>
             ))}
           </div>
         </div>

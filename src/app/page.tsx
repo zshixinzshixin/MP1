@@ -28,7 +28,7 @@ export default async function Home() {
             <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl opacity-80">
               {headline}
             </h2>
-            <p className="mt-6 text-base text-muted-foreground">
+            <p className="mt-6 text-xl text-muted-foreground">
               {introduction}
             </p>
             <SocialLinks className='md:mt-24'/>
