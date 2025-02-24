@@ -8,12 +8,13 @@ import { headline, introduction } from '@/config/infoConfig'
 import { BlogCard } from '@/components/home/BlogCard'
 import { getAllBlogs, type BlogType } from '@/lib/blogs'
 import { ProjectCard } from '@/components/project/ProjectCard'
-import { GithubProjectCard } from '@/components/project/GithubProjectCard'
-import { projectHeadLine, projectIntro, projects, githubProjects, blogHeadLine, blogIntro, techIcons } from '@/config/infoConfig'
+import { ActivityCard } from '@/components/home/ActivityCard'
+import { projectHeadLine, projectIntro, projects, blogHeadLine, blogIntro, techIcons } from '@/config/infoConfig'
+import { activities } from '@/config/projects'
 import GithubContributions from '@/components/home/GithubCalendar'
-import GitHubSnake from '@/components/home/GitHubSnake'
 import { CustomIcon } from '@/components/shared/CustomIcon'
 import IconCloud from "@/components/ui/icon-cloud"
+import { Calendar } from 'lucide-react'
 
 export default async function Home() {
   let blogList = (await getAllBlogs()).slice(0, 4)
@@ -38,7 +39,6 @@ export default async function Home() {
         </div>
         <div className="mt-6 border-t border-zinc-100 py-8 dark:border-zinc-700/40">
           {/* <GithubContributions /> */}
-          <GitHubSnake />
         </div>
         {/* projects */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
@@ -57,17 +57,18 @@ export default async function Home() {
             ))}
           </ul>
         </div>
+        {/* activities */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
-            <CustomIcon name='github' size={28}/>
-            Open Source
+            <Calendar size={28}/>
+            Hobbies & Volunteer
           </h2>
           <ul
             role="list"
             className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
           >
-            {githubProjects.map((project) => (
-              <GithubProjectCard key={project.name} project={project} titleAs='h3'/>
+            {activities.map((activity) => (
+              <ActivityCard key={activity.name} activity={activity} titleAs='h3'/>
             ))}
           </ul>
         </div>
