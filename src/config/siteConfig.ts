@@ -1,5 +1,5 @@
 // site config
-export const utm_source = process.env.NEXT_PUBLIC_UTM_SOURCE
+export const utm_source = 'derek-portfolio'
 
 
 // navigation config
