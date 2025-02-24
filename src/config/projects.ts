@@ -1,60 +1,72 @@
-// projects
-export const projectHeadLine = "What I've done and what I'm doing."
-export const projectIntro =
-  "I've worked on various project and Hackathons. Most of them are for SCLS Steam Week. "
-
+// Types
 export type ProjectItemType = {
   name: string
   description: string
   link: { href: string; label: string }
-  date?: string
-  logo?: string
-  category?: string[]
-  tags?: string[]
-  image?: string
-  techStack?: string[]
-  gitStars?: number
-  gitForks?: number
+  tags: string[]
 }
 
-// projects
+export type ActivityItemType = {
+  name: string
+  description: string
+  date: string
+  location: string
+  link?: string
+}
+
+// Awards
+export const awardsHeadLine = "Awards & Honors"
+export const awardsIntro = "Recognition for academic and professional achievements."
+
+export const awards: Array<ActivityItemType> = [
+  {
+    name: 'Outstanding Teacher Award',
+    description: '',
+    date: '2024',
+    location: 'SCLS, Shanghai',
+  },
+  {
+    name: 'Zhui Ying Award',
+    description: '',
+    date: '2023',
+    location: 'Qingpu, Shanghai',
+  },
+]
+
+// Research & Projects
+export const projectHeadLine = "Research & Projects"
+export const projectIntro = "Academic research and technical projects I've worked on."
+
 export const projects: Array<ProjectItemType> = [
   {
-    name: 'Final Project Portfolio',
+    name: 'Student Final Project Portfolio',
     description: 'Static website portfolio',
     link: { href: 'scls-cs.com', label: 'GitHub Cards' },
-    category: ['Website'],
-    techStack: ['Next.js', 'TailwindCSS', 'DaisyUI'],
-    tags: ['Showcase', 'Portfolio'],
+    tags: ['Website', 'Next.js', 'TailwindCSS', 'DaisyUI', 'Portfolio']
   },
   {
     name: 'Seeking DNA',
     description: '2022 SCLS Hackathon',
     link: { href: 'https://scls-cs.gitbook.io/scls-apcs-lab/lab5-dna', label: 'Hackathon' },
-    logo: '/images/icon/aibesttools.png',
-    category: ['Hackathon'],
-    techStack: ['Python', 'Java'],
-    tags: ['Hackathon'],
+    tags: ['Hackathon', 'Java']
   },
   {
     name: 'Texas Holdem Poker Judge',
     description: '2024 SCLS Hackathon',
     link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'Hackathon' },
-    logo: '/images/icon/bestdirectories.png',
-    category: ['Hackathon'],
-    techStack: ['Python', 'Java'],
-    tags: ['Hackathon'],
+    tags: ['Hackathon']
+  },
+  {
+    name: 'AI Camp Course Development',
+    description: 'Developed a comprehensive AI curriculum for high school students, incorporating real-world projects and startup concepts.',
+    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: 'View Course' },
+    tags: ['Education', 'AI']
   },
 ]
 
-// activities
-export type ActivityItemType = {
-  name: string // 活动名称
-  description: string // 活动描述
-  date: string // 活动时间
-  location: string // 活动地点
-  link?: string // 可选的外部链接
-}
+// Hobbies & Volunteer
+export const activitiesHeadLine = "Hobbies & Volunteer"
+export const activitiesIntro = "Personal interests and community contributions."
 
 export const activities: Array<ActivityItemType> = [
   {

@@ -10,11 +10,11 @@ import { getAllBlogs, type BlogType } from '@/lib/blogs'
 import { ProjectCard } from '@/components/project/ProjectCard'
 import { ActivityCard } from '@/components/home/ActivityCard'
 import { projectHeadLine, projectIntro, projects, blogHeadLine, blogIntro, techIcons } from '@/config/infoConfig'
-import { activities } from '@/config/projects'
+import { awards, awardsHeadLine, awardsIntro, activities, activitiesHeadLine, activitiesIntro } from '@/config/projects'
 import GithubContributions from '@/components/home/GithubCalendar'
 import { CustomIcon } from '@/components/shared/CustomIcon'
 import IconCloud from "@/components/ui/icon-cloud"
-import { Calendar } from 'lucide-react'
+import { Award, Briefcase, Heart } from 'lucide-react'
 
 export default async function Home() {
   let blogList = (await getAllBlogs()).slice(0, 4)
@@ -37,12 +37,27 @@ export default async function Home() {
             <IconCloud iconSlugs={techIcons} />
           </div>
         </div>
-        <div className="mt-6 border-t border-zinc-100 py-8 dark:border-zinc-700/40">
-          {/* <GithubContributions /> */}
-        </div>
-        {/* projects */}
+
+        {/* Awards */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl opacity-80">
+          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
+            <Award size={28}/>
+            {awardsHeadLine}
+          </h2>
+          <ul
+            role="list"
+            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
+          >
+            {awards.map((award) => (
+              <ActivityCard key={award.name} activity={award} titleAs='h3'/>
+            ))}
+          </ul>
+        </div>
+
+        {/* Research & Projects */}
+        <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
+          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
+            <Briefcase size={28}/>
             {projectHeadLine}
           </h2>
           <p className="text-base text-muted-foreground max-w-2xl mb-8">
@@ -57,12 +72,16 @@ export default async function Home() {
             ))}
           </ul>
         </div>
-        {/* activities */}
+
+        {/* Hobbies & Volunteer */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
-            <Calendar size={28}/>
-            Hobbies & Volunteer
+            <Heart size={28}/>
+            {activitiesHeadLine}
           </h2>
+          <p className="text-base text-muted-foreground max-w-2xl mb-8">
+            {activitiesIntro}
+          </p>
           <ul
             role="list"
             className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
@@ -72,8 +91,10 @@ export default async function Home() {
             ))}
           </ul>
         </div>
+
+        {/* Blog Section */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 py-8 my-8 lg:max-w-none border-t border-muted">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl opacity-80">
+          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
             {blogHeadLine}
           </h2>
           <p className="text-base text-muted-foreground max-w-2xl mb-8">
@@ -93,8 +114,6 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Career />
             <Education />
-
-            {/* <Newsletter /> */}
             <Feed />
           </div>
         </div>
