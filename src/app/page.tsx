@@ -1,6 +1,5 @@
 import { Container } from '@/components/layout/Container'
 import Newsletter from '@/components/home/Newsletter'
-import Feed from '@/components/home/Feed'
 import Career from '@/components/home/Career'
 import Education from '@/components/home/Education'
 import SocialLinks from '@/components/home/SocialLinks'
@@ -12,7 +11,6 @@ import { ActivityCard } from '@/components/home/ActivityCard'
 import { projectHeadLine, projectIntro, projects, blogHeadLine, blogIntro, techIcons } from '@/config/infoConfig'
 import { awards, awardsHeadLine, awardsIntro, activities, activitiesHeadLine, activitiesIntro } from '@/config/projects'
 import GithubContributions from '@/components/home/GithubCalendar'
-import { CustomIcon } from '@/components/shared/CustomIcon'
 import IconCloud from "@/components/ui/icon-cloud"
 import { Award, Briefcase, Heart } from 'lucide-react'
 
@@ -114,7 +112,6 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Career />
             <Education />
-            <Feed />
           </div>
         </div>
       </Container>
