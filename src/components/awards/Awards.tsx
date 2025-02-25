@@ -1,4 +1,4 @@
-import { awards } from '@/config/awards'
+import { awards } from '@/config/projects'
 import { Card } from '@/components/shared/Card'
 import { Section } from '@/components/layout/Section'
 
