@@ -11,9 +11,13 @@ export function Awards() {
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <h3 className="font-medium">{award.name}</h3>
-                <span className="text-sm text-muted-foreground">{award.date}</span>
+                <span className="text-sm text-muted-foreground">
+                  {award.date}
+                </span>
               </div>
-              <p className="text-sm text-muted-foreground">{award.description}</p>
+              <p className="text-sm text-muted-foreground">
+                {award.description}
+              </p>
               {award.link && (
                 <a
                   href={award.link}
