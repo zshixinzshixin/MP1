@@ -1,95 +1,73 @@
-// Types
+// ==================== 类型定义 ====================
+
+// 定义项目条目的数据类型
 export type ProjectItemType = {
-  name: string
-  description: string
-  link: { href: string; label: string }
-  tags: string[]
+  name: string                     // 项目名称
+  description: string             // 项目描述
+  link: { href: string; label: string }  // 项目链接对象，包含链接地址和显示标签
+  tags: string[]                  // 项目技术标签数组
 }
 
+// 定义活动/奖项条目的数据类型
 export type ActivityItemType = {
-  name: string
-  description: string
-  date: string
-  location: string
-  link?: string
+  name: string                    // 活动/奖项名称
+  description: string            // 详细描述
+  date: string                   // 日期（可以是年份或具体日期）
+  location: string               // 地点
+  link?: string                  // 相关链接（可选字段）
 }
 
-// Awards
-export const awardsHeadLine = "Awards & Honors"
-export const awardsIntro = "Recognition for academic and professional achievements."
+// ==================== 奖项与荣誉部分 ====================
 
+// 奖项部分标题
+export const awardsHeadLine = "Awards & Honors"
+// 奖项介绍文本
+export const awardsIntro = "awardIntro"
+
+// 奖项数据数组
 export const awards: Array<ActivityItemType> = [
   {
-    name: 'Outstanding Teacher Award',
-    description: '',
-    date: '2024',
-    location: 'SCLS, Shanghai',
-  },
-  {
-    name: 'Zhui Ying Award',
-    description: '',
-    date: '2023',
-    location: 'Qingpu, Shanghai',
+    name: 'xx Award',  // xx奖
+    description: '',                    // 描述为空
+    date: '2024',                      // 2024年获得
+    location: 'xx',        // xx机构颁发
   },
 ]
 
-// Research & Projects
+// ==================== 研究与项目部分 ====================
+
+// 项目部分标题
 export const projectHeadLine = "Research & Projects"
+// 项目介绍文本
 export const projectIntro = "Academic research and technical projects I've worked on."
 
+// 项目数据数组
 export const projects: Array<ProjectItemType> = [
   {
-    name: 'Student Final Project Portfolio',
-    description: 'Static website portfolio',
-    link: { href: 'scls-cs.com', label: 'GitHub Cards' },
-    tags: ['Website', 'Next.js', 'TailwindCSS', 'DaisyUI', 'Portfolio']
-  },
-  {
-    name: 'Seeking DNA',
-    description: '2022 SCLS Hackathon',
-    link: { href: 'https://scls-cs.gitbook.io/scls-apcs-lab/lab5-dna', label: 'Hackathon' },
-    tags: ['Hackathon', 'Java']
-  },
-  {
-    name: 'Texas Holdem Poker Judge',
-    description: '2024 SCLS Hackathon',
-    link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'Hackathon' },
-    tags: ['Hackathon']
-  },
-  {
-    name: 'AI Camp Course Development',
-    description: 'Developed a comprehensive AI curriculum for high school students, incorporating real-world projects and startup concepts.',
-    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: 'View Course' },
-    tags: ['Education', 'AI']
+    name: 'Study_Test',       // AI夏令营课程开发
+    description: 'emtpy',  // 为高中生开发全面的AI课程
+    link: { 
+      href: 'https://github.com/zshixinzshixin/Study_Test',  // 课程文档链接
+      label: 'View Course'                    // 链接显示文本
+    },
+    tags: ['Test', 'Study']                 // 项目领域
   },
 ]
 
-// Hobbies & Volunteer
+// ==================== 爱好与志愿者活动部分 ====================
+
+// 活动部分标题
 export const activitiesHeadLine = "Hobbies & Volunteer"
+// 活动介绍文本
 export const activitiesIntro = "Personal interests and community contributions."
 
+// 活动数据数组
 export const activities: Array<ActivityItemType> = [
   {
-    name: 'Python Workshop',
-    description:
-      'Teaching basic Python programming concepts to beginners. Covering variables, control flow, and functions.',
-    date: '2024-02-24',
-    location: 'Shanghai',
-    link: 'https://example.com/python-workshop',
-  },
-  {
-    name: 'AI Ethics Discussion',
-    description:
-      'A group discussion about the ethical implications of AI development and its impact on society.',
-    date: '2024-03-01',
-    location: 'Shanghai',
-    link: 'https://example.com/ai-ethics',
-  },
-  {
-    name: 'Code Review Session',
-    description:
-      'Helping students improve their coding skills through peer code review and best practices sharing.',
-    date: '2024-03-15',
-    location: 'Shanghai',
+    name: 'Study',                  // Python工作坊
+    description: 'empty',  // 向初学者教授Python基础
+    date: 'xxxx-xx-xx',                      // 具体日期：2024年2月24日
+    location: 'zhejiang',                     // 上海
+    link: 'https://github.com/zshixinzshixin/Study_Test',  // 工作坊链接
   },
 ]
